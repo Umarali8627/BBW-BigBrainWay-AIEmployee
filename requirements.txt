@@ -1,0 +1,3 @@
+Fastapi[standard]
+langchain_groq
+langchain
