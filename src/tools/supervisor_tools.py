@@ -1,5 +1,6 @@
 from langchain.tools import tool 
 from src.agents.rag_agent import agent 
+from src.agents.lead_agent import lead_Agent
 
 
 
@@ -22,4 +23,9 @@ def knowledgeBase(request:str)->str:
         ]
     })
     return result['messages'][-1].content
-
+@tool 
+def lead_collector(request:str):
+    """Use the lead collector tool to collect all the require detail of the lead 
+    """
+    result= lead_Agent.invoke({'messages':[{"role":'user','content':request}]})
+    return result['messages'][-1].content
