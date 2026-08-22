@@ -1,0 +1,26 @@
+[
+    {
+        "budget": 5000,
+        "email": "sohaib123@gmail.com",
+        "name": "Umar Ali",
+        "project_title": "Online Store"
+    },
+    {
+        "budget": "4000",
+        "email": "saad12@gmail.com",
+        "name": "Saad Khan",
+        "project_title": "store website"
+    },
+    {
+        "budget": "7000",
+        "email": "ibrahimdental@gmail.com",
+        "name": "Ibrahim Khan",
+        "project_title": "AI-Chatbot"
+    },
+    {
+        "budget": "3000",
+        "email": "ibrahimdental@gmail.com",
+        "name": "Ibrahim Khan",
+        "project_title": "AI-Chatbot"
+    }
+]
