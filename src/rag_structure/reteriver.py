@@ -10,6 +10,9 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_core .documents import Document
 from typing import List
+from langchain_openai import OpenAIEmbeddings
+from src.utils.settings import settings
+
 
 
 class HybridRetriever:
@@ -21,9 +24,12 @@ class HybridRetriever:
         self.vector_weight = 1- bm25_weight
 
         # Intialize embeddings 
-        self.embeddigns = HuggingFaceEmbeddings(
-            model_name = "sentence-transformers/all-MiniLM-L6-v2"
-        )
+        self.embeddigns = OpenAIEmbeddings(
+            model="sentence-transformers/multi-qa-mpnet-base-dot-v1",   # any embedding model OpenRouter lists
+            api_key=settings.OPEN_ROUTER_API_KEY,
+            base_url="https://openrouter.ai/api/v1",
+            check_embedding_ctx_length=False,
+)
         # create vector store and retriever 
         self.vector_store = Chroma.from_documents(
             documents=documents,

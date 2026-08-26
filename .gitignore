@@ -2,3 +2,5 @@
 __pycache__
 ./__pycache__
 env
+./ragstructure/data/chromadb
+/src\rag_structure\data\chroma_db

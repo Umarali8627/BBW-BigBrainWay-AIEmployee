@@ -6,6 +6,7 @@ class Settings(BaseSettings):
 
     GROQ_API_KEY: str
     MODEL: str
+    OPEN_ROUTER_API_KEY:str
 
 
 settings = Settings()
