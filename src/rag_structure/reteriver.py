@@ -5,7 +5,7 @@ Hybrid Search for production ready using vector and BM25
    retreiver with ensemble retrevier ,Using Class and method
 """
 from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
+
 from langchain_community.retrievers import BM25Retriever
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_core .documents import Document
