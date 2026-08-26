@@ -9,6 +9,6 @@ def Book_client(lead_data:dict):
 def checkAvailiabilty():
     pass 
 @tool
-def SendtoCRM():
+def SendtoCRM(booking_detail:dict):
     pass
 

@@ -1,10 +1,12 @@
 from fastapi import FastAPI
 from src.rag_structure import rag_pipeline
 from src.agents.rag_agent import agent
-from src.agents import supervisor_agent
+from src.agents.supervisor_agent import chat
 from src.agents import lead_agent
+import uuid 
 
 
+session_id = (uuid.uuid4())
 
 
 
@@ -20,5 +22,6 @@ app = FastAPI(
 def health_check():
     return {"message": "BBW AI Employee MultiAgent Assistant is running."}
 @app.post('/chat')
-def chat_with_rag(query:str)->str:
-      return rag_pipeline.chat_with_rag(query)
+def chat_with_Supervisor(query:str)->str:
+     
+      return chat(query,session_id)

@@ -22,5 +22,11 @@
         "email": "ibrahimdental@gmail.com",
         "name": "Ibrahim Khan",
         "project_title": "AI-Chatbot"
+    },
+    {
+        "budget_usd": 400,
+        "email": "awais12@gmail.com",
+        "name": "Awais",
+        "project_title": "chatbot"
     }
 ]

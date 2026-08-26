@@ -77,4 +77,11 @@ def test_supervisor():
                 )
 
         print()
-test_supervisor()
+# test_supervisor()
+
+def chat(request:str,session_id: str):
+    """Chat with supervisor Agent that handles all kind of application tasks"""
+    # creating config for the current uuid 
+    config = {'configurable':{'thread_id':session_id}}
+    response = supervisoragent.invoke({'messages':[{'role':'user','content':request}]},config = config)
+    return response['messages'][-1].content
