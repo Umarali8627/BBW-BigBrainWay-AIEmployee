@@ -1,6 +1,7 @@
 from langchain.tools import tool 
 from src.agents.rag_agent import agent 
 from src.agents.lead_agent import lead_Agent
+from src.agents.booking_agent import booking_agent
 import json
 
 
@@ -45,3 +46,26 @@ def save_lead_data(lead_data: dict)-> str:
 
 
     return f"Data Saved successfully..."
+@tool 
+def manage_meetingtime(request:str)-> dict:
+    """Use this tool to get the available slots for the meeting and select the time and day for the meeting"""
+    result= booking_agent.invoke({'messages':[{"role":'user','content':request}]},config= config)
+    return result['messages'][-1].content
+@tool
+def Book_client(lead_data:dict,meeting_time : dict) -> dict:
+    """Use Book client when user select the time and day in available slot then book it """
+    # lead_data['Booking_details'] = meeting_time
+    booking_details =  {
+        'lead_data': lead_data,
+        'booking_details': meeting_time
+    }
+    print(booking_details)
+    file_path= "src/tools/booking.json"
+    # with open(file_path,'r') as file :
+    #         bookings = json.load(file)
+    bookings  = []
+    bookings.append(booking_details)
+    with open(file_path,"w",encoding='utf-8') as file:
+            json.dump(bookings,file,indent=4)
+        
+    return f'Booking Confirmed'

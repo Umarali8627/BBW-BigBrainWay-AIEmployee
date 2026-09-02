@@ -1,0 +1,16 @@
+[
+    {
+        "lead_data": {
+            "Budget": "600",
+            "Email": "haddikhn22@gmail.com",
+            "Name": "Hadi khan",
+            "Project Title": "website"
+        },
+        "booking_details": {
+            "date": "2024-10-03",
+            "end_time": "11:00",
+            "start_time": "10:00",
+            "timezone": "Local"
+        }
+    }
+]

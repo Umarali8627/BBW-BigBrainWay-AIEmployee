@@ -4,7 +4,7 @@ from src.agents.rag_agent import agent
 from src.agents.supervisor_agent import chat
 from src.agents import lead_agent
 import uuid 
-
+from src.agents import booking_agent
 
 session_id = (uuid.uuid4())
 
