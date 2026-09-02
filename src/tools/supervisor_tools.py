@@ -61,8 +61,8 @@ def Book_client(lead_data:dict,meeting_time : dict) -> dict:
     }
     print(booking_details)
     file_path= "src/tools/booking.json"
-    # with open(file_path,'r') as file :
-    #         bookings = json.load(file)
+    with open(file_path,'r') as file :
+            bookings = json.load(file)
     bookings  = []
     bookings.append(booking_details)
     with open(file_path,"w",encoding='utf-8') as file:

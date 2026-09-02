@@ -1,16 +1,15 @@
 [
     {
         "lead_data": {
-            "Budget": "600",
-            "Email": "haddikhn22@gmail.com",
-            "Name": "Hadi khan",
-            "Project Title": "website"
+            "budget": "300",
+            "email": "awais21@gmail.com",
+            "name": "awais",
+            "project_title": "chatbot"
         },
         "booking_details": {
-            "date": "2024-10-03",
-            "end_time": "11:00",
-            "start_time": "10:00",
-            "timezone": "Local"
+            "date": "Monday, 28 Sep",
+            "time_gmt": "6 AM \u2013 7 AM",
+            "time_local": "10 AM \u2013 11 AM"
         }
     }
 ]

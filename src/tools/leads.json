@@ -64,5 +64,17 @@
         "Email": "haddikhn22@gmail.com",
         "Name": "Hadi khan",
         "Project Title": "website"
+    },
+    {
+        "budget": "400",
+        "email": "Abubakar12@gmail.com",
+        "name": "Abubakar",
+        "project_title": "website"
+    },
+    {
+        "budget": "300",
+        "email": "awais21@gmail.com",
+        "name": "awais",
+        "project_title": "chatbot"
     }
 ]
