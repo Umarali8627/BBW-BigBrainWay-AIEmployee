@@ -78,7 +78,7 @@ def test_supervisor():
                 )
 
         print()
-test_supervisor()
+# test_supervisor()
 
 def chat(request:str,session_id: str):
     """Chat with supervisor Agent that handles all kind of application tasks"""
