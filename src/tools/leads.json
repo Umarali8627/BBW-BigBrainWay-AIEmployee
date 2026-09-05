@@ -76,5 +76,35 @@
         "email": "awais21@gmail.com",
         "name": "awais",
         "project_title": "chatbot"
+    },
+    {
+        "budget": 500,
+        "email": "faizali12@gmail.com",
+        "name": "Faiz Ali",
+        "project_title": "website"
+    },
+    {
+        "budget": "1000",
+        "business_name": "wisal",
+        "contact_email": "wisalafridi12@gmai.com",
+        "project_title": "BI dashboard"
+    },
+    {
+        "name": "Ahmad raza",
+        "budget": "400",
+        "project_description": "chatbot",
+        "email": "Ahmad32@gmail.com"
+    },
+    {
+        "budget": "400",
+        "full_name": "Hadi Khan",
+        "project_description": "e-commerce website",
+        "email": "hadi1122@gmail.com"
+    },
+    {
+        "email": "hadi12@gmail.com",
+        "project_description": "e-commerce website",
+        "full_name": "Hadi Khan",
+        "budget": "400"
     }
 ]

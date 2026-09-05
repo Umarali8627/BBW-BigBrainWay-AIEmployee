@@ -3,8 +3,8 @@ from src.llm import model
 from src.tools.booking_tools import checkAvailiabilty
 
 
-SYSTEM_PROMPT = """You are the Booking Agent that books client for the BBW Your main goal is to book a client in a available slots
-use the checkAvailiblity to get the available slots for the meeting ."""
+SYSTEM_PROMPT = """You are the Booking Agent that books client for the BBW Your main goal is to book a client to show  available slots
+use the checkAvailiblity to get the available slots for the meeting and make sure don't guess it use only available slots and make sure to provide accurate information ."""
 
 
 booking_agent = create_agent(

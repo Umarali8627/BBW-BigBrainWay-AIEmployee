@@ -1,10 +1,8 @@
 from fastapi import FastAPI
-from src.rag_structure import rag_pipeline
-from src.agents.rag_agent import agent
 from src.agents.supervisor_agent import chat
-from src.agents import lead_agent
 import uuid 
-from src.agents import booking_agent
+from src.tools.lead_tools import load_allleads
+from src.tools.booking_tools import load_allbookings
 
 session_id = (uuid.uuid4())
 
@@ -25,3 +23,12 @@ def health_check():
 def chat_with_Supervisor(query:str)->str:
      
       return chat(query,session_id)
+@app.get('/leads')
+def get_all_leads()->list:
+    """get all the leads from the database and return as a list of json"""
+    return load_allleads()
+
+@app.get('/bookings')
+def get_all_bookings()->list:
+    """get all the bookings from the database and return as a list of json"""
+    return load_allbookings()

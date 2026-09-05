@@ -1,6 +1,6 @@
 from src.llm import model 
 from langchain.agents import create_agent
-from src.tools.supervisor_tools import knowledgeBase,lead_collector,save_lead_data,Book_client
+from src.tools.supervisor_tools import knowledgeBase,lead_collector,save_lead_data,Book_client,manage_meetingtime
 from langgraph.checkpoint.memory import InMemorySaver
 
 
@@ -13,11 +13,13 @@ Your role is to to classify the user intent into one of the following categories
 1.Knowledge Base : use Knowledge base tool to answert the question.
 2.lead collector : Use this tool whenever a user have intent of the building something or to be our customer.to collect the lead data.
 3.save_lead_data:Use this tool to save the current lead data and make sure to save the data after collecting lead data.
-4.Book_client: use this tool to book a client for a meeting after collecting the lead data and selecting an available time slot."""
+4.manage_meetingtime: use this tool to manage meeting times and availability to showing the available time slots of our sales persons.
+5.Book_client: use this tool to book a client for a meeting after collecting the lead data .
+"""
 
 supervisoragent = create_agent(
     model = model.get_model(),
-    tools = [knowledgeBase,lead_collector,save_lead_data,Book_client],
+    tools = [knowledgeBase,lead_collector,save_lead_data,manage_meetingtime,Book_client],
     system_prompt=SupervisorPrompt,
     checkpointer=InMemorySaver()
 
@@ -78,7 +80,7 @@ def test_supervisor():
                 )
 
         print()
-# test_supervisor()
+test_supervisor()
 
 def chat(request:str,session_id: str):
     """Chat with supervisor Agent that handles all kind of application tasks"""

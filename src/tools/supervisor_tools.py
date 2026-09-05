@@ -48,7 +48,7 @@ def save_lead_data(lead_data: dict)-> str:
     return f"Data Saved successfully..."
 @tool 
 def manage_meetingtime(request:str)-> dict:
-    """Use this tool to get the available slots for the meeting and select the time and day for the meeting"""
+    """Use this tool to get the available slots for the meeting and then show the available options to select the time and day for the meeting"""
     result= booking_agent.invoke({'messages':[{"role":'user','content':request}]},config= config)
     return result['messages'][-1].content
 @tool
@@ -63,7 +63,7 @@ def Book_client(lead_data:dict,meeting_time : dict) -> dict:
     file_path= "src/tools/booking.json"
     with open(file_path,'r') as file :
             bookings = json.load(file)
-    bookings  = []
+    # bookings  = []
     bookings.append(booking_details)
     with open(file_path,"w",encoding='utf-8') as file:
             json.dump(bookings,file,indent=4)

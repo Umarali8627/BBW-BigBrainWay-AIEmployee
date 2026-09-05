@@ -18,3 +18,11 @@ def collect_leadData(name : str,
         }
     return lead_deatil
 
+def load_allleads()-> list: 
+    """load all the leads from the database and return as a list of json"""
+    # come from file and return as a list of json
+    with open('src/tools/leads.json', 'r') as f:
+        leads = json.load(f)
+    return leads
+
+# print(load_allleads())
