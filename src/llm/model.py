@@ -17,8 +17,8 @@ def get_model():
         google_model = ChatGoogleGenerativeAI(
             model=settings.GOOGLE_MODEL,
             api_key=settings.GOOGLE_API_KEY,
-            temperature=0.4,
-            max_output_tokens=1024
+            temperature=0.2,
+            max_output_tokens=2048
         )
         return google_model
     except Exception as e:
